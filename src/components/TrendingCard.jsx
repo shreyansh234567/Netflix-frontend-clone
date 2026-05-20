@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function TrendingCard({ rank, img }) {
   return (
     <div className="relative flex-shrink-0 flex items-center justify-end w-[135px] md:w-[170px] lg:w-[195px] h-[140px] md:h-[185px] lg:h-[210px] group/card cursor-pointer transition-transform duration-300 hover:scale-[1.02] origin-center">

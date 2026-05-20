@@ -1,4 +1,3 @@
-import React from 'react';
 import { footerLinks } from './footerLinks.js';
 import LanguageSelector from './LanguageSelector.jsx';
 

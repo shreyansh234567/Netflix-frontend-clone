@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function FAQItem({ item, isOpen, onClick }) {
   return (
     <li className="flex flex-col w-full text-white bg-[#2d2d2d] transition-colors duration-200">

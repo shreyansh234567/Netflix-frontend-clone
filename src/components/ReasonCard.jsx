@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function ReasonCard({ title, description, icon }) {
   return (
     <div 

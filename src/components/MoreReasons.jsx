@@ -1,4 +1,3 @@
-import React from 'react';
 import { reasonsData } from './reasonsData.jsx';
 import ReasonCard from './ReasonCard.jsx';
 
