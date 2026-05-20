@@ -21,13 +21,14 @@ export default function TrendingNow() {
 
   return (
     <section className="w-full bg-black py-8 md:py-12 relative z-20 overflow-visible">
-      <div className="px-6 sm:px-8 md:px-20 lg:px-[9.25rem] 2xl:px-[22.125rem] max-w-[1920px] mx-auto mb-2 md:mb-4">
+      <div className="max-w-[1200px] mx-auto px-[5%] md:px-[8%] lg:px-[10%] mb-2 md:mb-4">
         <h2 className="text-white text-[1.25rem] md:text-[1.5rem] lg:text-[2.5rem] font-bold font-netflix text-left">
           Trending Now
         </h2>
       </div>
 
       <div className="relative group/slider w-full">
+        {/* Left Arrow */}
         <button
           onClick={slideLeft}
           className="absolute left-[1%] top-1/2 -translate-y-1/2 z-30 hidden md:flex w-[35px] h-[75px] md:w-[40px] md:h-[80px] items-center justify-center bg-[rgba(20,20,20,0.5)] text-white opacity-0 transition-all duration-300 hover:bg-[rgba(20,20,20,0.7)] group-hover/slider:opacity-100 rounded-lg"
@@ -37,11 +38,13 @@ export default function TrendingNow() {
           </svg>
         </button>
 
+        {/* Slider Container */}
         <div
           ref={sliderRef}
           className="flex overflow-x-auto scrollbar-hide scroll-smooth py-4 md:py-6"
         >
-          <div className="w-6 sm:w-8 md:w-20 lg:w-[9.25rem] 2xl:w-[22.125rem] flex-shrink-0" />
+          {/* Spacer to simulate padding while allowing full scroll */}
+          <div className="w-[5%] md:w-[8%] lg:w-[10%] flex-shrink-0" />
 
           <div className="flex gap-2 md:gap-4 lg:gap-6">
             {trendingMovies.map((movie) => (
@@ -53,9 +56,11 @@ export default function TrendingNow() {
             ))}
           </div>
 
-          <div className="w-6 sm:w-8 md:w-20 lg:w-[9.25rem] 2xl:w-[22.125rem] flex-shrink-0" />
+          {/* Spacer for right side padding */}
+          <div className="w-[5%] md:w-[8%] lg:w-[10%] flex-shrink-0" />
         </div>
 
+        {/* Right Arrow */}
         <button
           onClick={slideRight}
           className="absolute right-[1%] top-1/2 -translate-y-1/2 z-30 hidden md:flex w-[35px] h-[75px] md:w-[40px] md:h-[80px] items-center justify-center bg-[rgba(20,20,20,0.5)] text-white opacity-0 transition-all duration-300 hover:bg-[rgba(20,20,20,0.7)] group-hover/slider:opacity-100 rounded-lg"
