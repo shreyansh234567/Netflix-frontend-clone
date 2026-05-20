@@ -4,26 +4,38 @@ export default function Hero() {
   const [email, setEmail] = useState('');
 
   return (
-    <section className="relative w-full min-h-[90vh] md:min-h-[100vh] flex flex-col justify-center border-b-[8px] border-[#232323]">
+    <section className="relative w-full min-h-[90vh] md:min-h-[100vh] flex flex-col justify-center border-b-[8px] border-[#232323] -mt-20 lg:-mt-[88px]">
       <div className="absolute inset-0 w-full h-full z-0 overflow-hidden">
+        <div className="absolute inset-0 z-[2]"
+          style={{
+            background: `
+              radial-gradient(11% 56% at 17% 50%, #461518 0%, transparent 100%),
+              radial-gradient(11% 56% at 83% 50%, #461518 0%, transparent 100%)
+            `
+          }}
+        />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 z-[3] w-[120.5rem] h-full"
+          style={{
+            background: 'linear-gradient(0deg, transparent 0%, #6f181d 50%, transparent 100%)'
+          }}
+        />
         <img
           src="https://assets.nflxext.com/ffe/siteui/vlv3/435e8bb8-7f1b-49cb-8da8-bff997124294/web/IN-en-20260511-TRIFECTA-perspective_ec39852e-0b48-4e8a-b415-dd8376cd83ce_large.jpg"
           alt="Netflix background"
-          className="w-full h-full object-cover object-center scale-105"
+          className="absolute inset-0 w-full h-full object-cover object-center scale-105 z-[1]"
         />
         <div
-          className="absolute inset-0"
+          className="absolute inset-0 z-[4]"
           style={{
-            background: 'rgba(0, 0, 0, 0.4)',
-            backgroundImage: `
-              linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%),
-              radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%)
+            background: `
+              linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 40%, rgba(0, 0, 0, 0.8) 80%),
+              radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 100%)
             `
           }}
         />
       </div>
 
-      <div className="relative z-10 flex flex-col items-center justify-center flex-1 text-center px-[5%] mt-12 md:mt-20">
+      <div className="relative z-10 flex flex-col items-center justify-center flex-1 text-center px-6 sm:px-8 md:px-20 lg:px-[9.25rem] 2xl:px-[22.125rem] mt-12 md:mt-20">
         <h1 className="text-white font-black leading-tight mb-4 w-full max-w-[900px]"
             style={{ fontSize: 'clamp(2rem, 5vw, 4rem)' }}>
           Unlimited movies, TV shows and more
